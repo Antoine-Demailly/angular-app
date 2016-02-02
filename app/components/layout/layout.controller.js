@@ -7,7 +7,6 @@
 
   LayoutController.$inject = ['$scope', '$translate'];
 
-  /* @ngInject */
   function LayoutController($scope, $translate) {
     var vm = this;
 
@@ -17,7 +16,7 @@
 
     ///////// Public
     function init() {
-      
+
     }
 
     function switchLanguage(language) {
