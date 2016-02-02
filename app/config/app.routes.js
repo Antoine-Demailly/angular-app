@@ -8,7 +8,6 @@
   config.$inject = ['$routeProvider', '$locationProvider'];
 
   function config($routeProvider, $locationProvider) {
-
     $routeProvider
       .when('/', {
         templateUrl: 'templates/home.view.html',

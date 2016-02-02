@@ -5,10 +5,7 @@
   <title translate>title</title>
   <base href="/">
 
-  <!-- Resources CSS -->
-  <link rel="stylesheet" href="assets/css/reset.min.css" media="screen" title="no title" charset="utf-8">
-
-  <!-- Custom CSS -->
+  <!-- Load Compiled CSS -->
   <link rel="stylesheet" href="assets/css/master.css" media="screen" title="no title" charset="utf-8">
 
   <!-- Bower Dependencies -->
@@ -25,13 +22,19 @@
 
   <!-- Components -->
   <script src="app/components/chat/chat.controller.js"></script>
+
   <script src="app/components/error/error.controller.js"></script>
+
   <script src="app/components/home/home.controller.js"></script>
+
   <script src="app/components/layout/layout.service.js"></script>
   <script src="app/components/layout/layout.controller.js"></script>
+
   <script src="app/components/user/user.controller.js"></script>
 </head>
 <body ng-controller="LayoutController as vm" ng-init="vm.init()">
+  
+  <!-- Layout -->
   <h1 translate>title</h1>
   <nav>
     <ul>
@@ -46,6 +49,8 @@
     <li><span ng-click="vm.switchLanguage('fr');">Français</span></li>
     <li><span ng-click="vm.switchLanguage('en');">Anglais</span></li>
   </ul>
+
+  <!-- ng-view container -->
   <div ng-view>
 
   </div>
