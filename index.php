@@ -5,7 +5,7 @@
   <title translate>title</title>
   <base href="/">
 
-  <script src="server.to.client.js?client=dsldksmldkqsmlk"></script>
+  <link rel="stylesheet" href="/css/master.css" media="screen" title="no title" charset="utf-8">
 
   <script src="bower_components/angular/angular.min.js"></script>
   <script src="bower_components/angular-route/angular-route.min.js"></script>
@@ -40,7 +40,6 @@
     <li><span ng-click="vm.switchLanguage('fr');">Français</span></li>
     <li><span ng-click="vm.switchLanguage('en');">Anglais</span></li>
   </ul>
-  {{vm.pathList}}
   <div ng-view>
 
   </div>

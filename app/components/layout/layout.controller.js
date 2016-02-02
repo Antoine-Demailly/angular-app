@@ -17,7 +17,7 @@
 
     ///////// Public
     function init() {
-      vm.pathList = serverToClient.pathList;
+      
     }
 
     function switchLanguage(language) {

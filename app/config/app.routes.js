@@ -8,15 +8,32 @@
   config.$inject = ['$routeProvider', '$locationProvider'];
 
   function config($routeProvider, $locationProvider) {
-    angular.forEach(serverToClient.routing.routes, function(route) {
-      $routeProvider.when(route.path, {
-        templateUrl: route.templateUrl,
-        controller: route.controller,
-        controllerAs: route.controllerAs,
-      });
-    });
 
-    $routeProvider.otherwise(serverToClient.routing.otherwise);
+    $routeProvider
+      .when('/', {
+        templateUrl: 'templates/home.view.html',
+        controller: 'HomeController',
+        controllerAs: 'vm',
+      })
+      .when('/chat', {
+        templateUrl: 'templates/chat.view.html',
+        controller: 'ChatController',
+        controllerAs: 'vm',
+      })
+      .when('/user/:user', {
+        templateUrl: 'templates/user.view.html',
+        controller: 'UserController',
+        controllerAs: 'vm',
+      })
+      .when('/error/404', {
+        templateUrl: 'templates/404.view.html',
+        controller: 'ErrorController',
+        controllerAs: 'vm',
+      });
+
+    $routeProvider.otherwise({
+      redirectTo: '/error/404',
+    });
 
     $locationProvider.html5Mode(true);
   }
